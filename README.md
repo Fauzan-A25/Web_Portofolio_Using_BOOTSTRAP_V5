@@ -46,7 +46,3 @@ Deploy it on GitHub Pages, Netlify, or any other hosting platform.
 🤝 Contributing
 
 Contributions are welcome! If you have suggestions or improvements, please create a pull request or open an issue.
-
-🛠️ License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
