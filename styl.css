@@ -1,13 +1,39 @@
-body {
-    min-height: 3000px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}       
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+p, body {
+    font-family: 'Open Sans', sans-serif;
+}
 
 .jumbotron {
-    padding-top: 3rem;
+    padding-top: 7rem;
     background-color: #daf3ff;
 }
 
 #projects {
     background-color: #daf3ff;
+}
+
+section {
+    padding-top: 5rem;
+}
+
+.skills-badge {
+    background-color: #70d2ff;
+    color: white;
+    margin: 5px;
+}
+
+.download-btn {
+    background-color: #70d2ff;
+    color: white;
+    border-radius: 50px;
+}
+
+.nav-about{
+    transition: background-color 0.3s ease;
+    opacity: 100; /* Mulai dengan opacity 0 */
+    transition: all 0.5s ease;
 }

@@ -11,16 +11,31 @@
       crossorigin="anonymous"
     />
 
+    <!-- Boostrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- AOV -->
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My CSS -->
 
     <link rel="stylesheet" href="styl.css" />
   </head>
-  <body>
+
+  <body id="home">
+
     <!-- NavBar -->
 
-    <nav class="navbar navbar-expand-lg" style="background-color: #daf3ff">
+    <nav
+      class="navbar navbar-expand-lg shadow-sm fixed-top"
+      style="background-color: #daf3ff"
+    >
       <div class="container">
-        <a class="navbar-brand" href="#">Fauzan Ahsanudin Alfikri</a>
+        <p><b>FAA</b></p>
         <button
           class="navbar-toggler"
           type="button"
@@ -35,16 +50,18 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#home"
+                ><i class="bi bi-house-fill"></i> Home</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link nav-about" href="#about"><i class="bi bi-file-person-fill"></i> About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
+              <a class="nav-link nav-projects" href="#projects"><i class="bi bi-clipboard-data"></i> Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contacs</a>
+              <a class="nav-link nav-contacs" href="#contacs"><i class="bi bi-person-lines-fill"></i> Contacs</a>
             </li>
           </ul>
         </div>
@@ -57,7 +74,7 @@
 
     <section class="jumbotron text-center" style="background-color: #daf3ff">
       <img
-        src="img/Fauzan.png"
+        src="./Img/Fauzan.png"
         alt="Fauzan Ahsanudin Alfikri"
         width="200"
         class="rounded-circle img-thumbnail"
@@ -78,34 +95,82 @@
     <!-- About -->
 
     <section id="about">
-      <div class="container">
+      <div class="container mt-5">
         <div class="row text-center mb-3">
           <div class="col">
             <h2>About me</h2>
           </div>
         </div>
-        <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
-            <p>
-              First-year Telkom University undergraduate student from S1 Data
-              Analist, and I have a strong passion for coding, which has become
-              one of my main hobbies. In addition to coding, I am highly
-              interested in data management and software development. I am
-              motivated and dedicated to achieving my goals, and I thrive in
-              collaborative environments where teamwork is essential.
-            </p>
+        <div class="row">
+          <!-- Introduction Section -->
+          <div class="col-md-6">
+            <div class="card p-4 shadow-sm">
+              <h4 class="card-title text-center">Introduction</h4>
+              <p class="card-text">
+                Second-year Telkom University undergraduate student from S1 Data
+                Analist, and I have a strong passion for coding, which has
+                become one of my main hobbies. In addition to coding, I am
+                highly interested in data management and software development. I
+                am motivated and dedicated to achieving my goals, and I thrive
+                in collaborative environments where teamwork is essential.
+              </p>
+              <div class="text-center">
+                <button id="CV" class="btn download-btn">
+                  Download CV <i class="bi bi-download"></i>
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="col-md-4">
-            <p>
-              Software : Visual Studio Code, Adobe After effect & Photoshop &
-              Premiere, Github, Microsoft Word & Exel & Power Point, HeidiSQL
-              Language : Indonesian (Native Proficiency), English (Profecional
-              Proficiency), Sundanese, and Javanese Programming Skills Go
-              languange, Python, Java Script, Html, Css, Node Js, Sql
-            </p>
+
+          <!-- Skills Section -->
+          <div class="col-md-6">
+            <div class="row">
+              <!-- Website Development Skills -->
+              <div class="col-md-6">
+                <h5 class="mb-3">Website Development</h5>
+                <span class="badge skills-badge">HTML</span>
+                <span class="badge skills-badge">CSS</span>
+                <span class="badge skills-badge">JavaScript</span>
+                <span class="badge skills-badge">Bootstrap 5</span>
+                <span class="badge skills-badge">Node.js</span>
+              </div>
+              <!-- Data Science Skills -->
+              <div class="col-md-6">
+                <h5 class="mb-3">Data Science</h5>
+                <span class="badge skills-badge">Python</span>
+                <span class="badge skills-badge">Pandas</span>
+                <span class="badge skills-badge">Numpy</span>
+                <span class="badge skills-badge">Matplotlib</span>
+                <span class="badge skills-badge">Seaborn</span>
+                <span class="badge skills-badge">Random Forrest</span>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <!-- Languange Programing Skills -->
+              <div class="col-md-6">
+                <h5 class="mb-3">Languange Programing Skills</h5>
+                <span class="badge skills-badge">Python</span>
+                <span class="badge skills-badge">GO Languange</span>
+                <span class="badge skills-badge">Python</span>
+                <span class="badge skills-badge">JavaScript</span>
+                <span class="badge skills-badge">C++</span>
+              </div>
+              <!-- Languange Skills -->
+              <div class="col-md-6">
+                <h5 class="mb-3">Languange Skills</h5>
+                <span class="badge skills-badge"
+                  >English (Profecional Proficiency)</span
+                >
+                <span class="badge skills-badge"
+                  >Indonesian (Native Proficiency)</span
+                >
+                <span class="badge skills-badge">Javanese</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#daf3ff"
@@ -130,7 +195,7 @@
           <div class="col-md-4 mb-3">
             <div class="card">
               <img
-                src="img/image_1.jpg"
+                src="./Img/image_1.jpg"
                 class="card-img-top"
                 alt="Discord Bot Musik"
               />
@@ -147,7 +212,7 @@
           <div class="col-md-4 mb-3">
             <div class="card">
               <img
-                src="img/image_1.jpg"
+                src="./Img/image_1.jpg"
                 class="card-img-top"
                 alt="Discord Bot Musik"
               />
@@ -164,7 +229,7 @@
           <div class="col-md-4 mb-3">
             <div class="card">
               <img
-                src="img/image_1.jpg"
+                src="./Img/image_1.jpg"
                 class="card-img-top"
                 alt="Discord Bot Musik"
               />
@@ -180,42 +245,91 @@
           </div>
         </div>
       </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,128L48,138.7C96,149,192,171,288,197.3C384,224,480,256,576,272C672,288,768,288,864,250.7C960,213,1056,139,1152,122.7C1248,107,1344,149,1392,170.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
     </section>
 
     <!-- End Project -->
 
     <!-- Contact -->
 
-    <section id="contact">
+    <section id="contacs">
       <div class="container">
         <div class="row text-center">
-          <div class="col">
+          <div class="col mb-3">
             <h2>Contact Me</h2>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-8">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
             <form>
               <div class="mb-3">
                 <label for="name" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  aria-describedby="name"
+                />
               </div>
               <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  aria-describedby="email"
+                />
               </div>
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              <div class="mb-3">
+                <label for="Pesan" class="form-label">Pesan</label>
+                <textarea class="form-control" id="Pesan" rows="3"></textarea>
               </div>
+
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
           </div>
         </div>
       </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#daf3ff"
+          fill-opacity="1"
+          d="M0,96L48,122.7C96,149,192,203,288,229.3C384,256,480,256,576,218.7C672,181,768,107,864,112C960,117,1056,203,1152,229.3C1248,256,1344,224,1392,208L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
     </section>
 
-    <!-- Contact -->
+    <!-- End Contact -->
+
+    <!-- Footer -->
+
+    <footer class="text-center pb-4" style="background-color: #daf3ff">
+      <p>
+        <i class="bi bi-laptop"></i> Created By :
+        <a
+          href="https://www.linkedin.com/in/fauzanahsanudin/"
+          class="text-black fw-bold"
+          >Fauzan Ahsanudin Alfikri</a
+        >
+      </p>
+    </footer>
+
+    <!-- End Footer -->
+
+    <!-- My JS -->
+
+    <script src="script.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
