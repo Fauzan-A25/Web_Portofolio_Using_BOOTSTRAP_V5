@@ -2,7 +2,7 @@
 
 body {
     background-color: #daf3ff;
-  }  
+}  
 
 h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
@@ -11,11 +11,11 @@ p, body {
     font-family: 'Open Sans', sans-serif;
 }
 
-#about{
-    background-color: #ffff;
+#about {
+    background-color: #fff;
 }
 
-#contacs{
+#contacs {
     background-color: #fff;
 }
 
@@ -44,49 +44,46 @@ section {
     border-radius: 50px;
 }
 
-.nav-about{
+.nav-about {
     transition: background-color 0.3s ease;
-    opacity: 100; /* Mulai dengan opacity 0 */
+    opacity: 100;
     transition: all 0.5s ease;
 }
 
 .logo {
     font-family: 'Montserrat', sans-serif;
-    font-size: 30px; /* Ukuran teks logo */
-    font-weight: 700; /* Ketebalan font */
-    color: #333; /* Warna teks logo, bisa diubah sesuai keinginan */
-    letter-spacing: 2px; /* Memberikan spasi antar huruf */
-    text-align: center; /* Menjadikan teks di tengah */
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 2px;
+    text-align: center;
 }
 
 footer .social-icon {
-    margin: 0 15px; /* Jarak horizontal antar logo */
-    font-size: 1.5rem; /* Ukuran icon */
-    color: #333; /* Warna icon */
+    margin: 0 15px;
+    font-size: 1.5rem;
+    color: #333;
     transition: color 0.3s ease;
-  }
-  
-footer .social-icon:hover {
-    color: #007bff; /* Warna ketika hover */
-  }
-
-
-.text-gradient {
-  background: linear-gradient(135deg, black, white);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  background-color: lightblue; /* Warna background biru */
 }
 
-/* Tambahkan gaya untuk gambar agar sudutnya melengkung */
+footer .social-icon:hover {
+    color: #007bff;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, black, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    background-color: lightblue;
+}
+
 .project-image {
     border-radius: 10px;
     max-width: 100%;
 }
 
-/* Gaya untuk Card dengan Hover Effect */
 .project-card {
     background-color: #daf3ff;
     border-radius: 15px;
@@ -94,14 +91,12 @@ footer .social-icon:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efek Hover pada Card */
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-    border: 2px solid #007bff; /* Border warna biru saat hover */
+    border: 2px solid #007bff;
 }
 
-/* Tambahkan gaya padding untuk bagian teks */
 .project-content h2 {
     font-weight: bold;
     font-size: 24px;
@@ -113,7 +108,6 @@ footer .social-icon:hover {
     line-height: 1.6;
 }
 
-/* Gaya untuk Bagian Author */
 .project-content .author {
     display: flex;
     align-items: center;
@@ -132,7 +126,6 @@ footer .social-icon:hover {
     color: #777;
 }
 
-/* Efek hover animasi pada gambar proyek */
 .project-image {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -142,23 +135,88 @@ footer .social-icon:hover {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .project-card {
-        flex-direction: column;
-    }
+.contaks:hover {
+    transform: scale(1.05);
+}
 
+.btn:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Breakpoints */
+
+/* Breakpoint untuk ponsel kecil (≤ 480px) */
+@media (max-width: 480px) {
+    .jumbotron {
+        padding-top: 3rem;
+    }
+    section {
+        padding-top: 3rem;
+    }
     .project-content h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+    }
+    .skills-badge {
+        margin: 2px;
+        font-size: 0.8rem;
+    }
+    .download-btn {
+        font-size: 0.8rem;
+        padding: 10px 20px;
     }
 }
 
+/* Breakpoint untuk tablet dan layar menengah (≤ 768px) */
+@media (max-width: 768px) {
+    .jumbotron {
+        padding-top: 5rem;
+    }
+    section {
+        padding-top: 4rem;
+    }
+    .project-content h2 {
+        font-size: 1.5rem;
+    }
+    .skills-badge {
+        margin: 3px;
+        font-size: 0.9rem;
+    }
+    .download-btn {
+        font-size: 0.9rem;
+        padding: 12px 25px;
+    }
+}
 
-.contaks:hover {
-    transform: scale(1.05);
-  }
+/* Breakpoint untuk layar besar (≥ 1200px) */
+@media (min-width: 1200px) {
+    .jumbotron {
+        padding-top: 10rem;
+    }
+    section {
+        padding-top: 7rem;
+    }
+    .project-content h2 {
+        font-size: 2rem;
+    }
+    .skills-badge {
+        margin: 10px;
+        font-size: 1rem;
+    }
+    .download-btn {
+        font-size: 1.1rem;
+        padding: 15px 30px;
+    }
+}
 
-  /* Animasi Hover pada Tombol */
-  .btn:hover {
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-  }
+/* Warna default */
+.nav-link {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+/* Warna saat elemen aktif */
+.nav-link.active {
+    color: #007bff; /* Warna biru saat aktif */
+    font-weight: bold; /* Bisa tambahkan efek lain seperti font tebal */
+    border-bottom: 2px solid #007bff; /* Garis bawah saat aktif */
+}

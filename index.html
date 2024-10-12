@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="styl.css" />
   </head>
 
-  <body id="home">
+  <body>
     <!-- NavBar -->
     <nav
       class="navbar navbar-expand-lg shadow-sm fixed-top"
@@ -48,7 +48,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home"
+              <a class="nav-link nav-home" href="#home"
                 ><i class="bi bi-house-fill"></i> Home</a
               >
             </li>
@@ -76,7 +76,7 @@
 
     <!-- Jumboron -->
 
-    <section class="jumbotron text-center" style="background-color: #daf3ff">
+    <section class="jumbotron text-center" style="background-color: #daf3ff" id="home">
       <img
         src="./Img/Fauzan.png"
         alt="Fauzan Ahsanudin Alfikri"
@@ -101,13 +101,13 @@
     <section id="about">
       <div class="container mt-5">
         <div class="row text-center mb-3">
-          <div class="col">
+          <div class="col" data-aos="fade-down" data-aos-duration="1000">
             <h2>About me</h2>
           </div>
         </div>
         <div class="row">
           <!-- Introduction Section -->
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
             <div class="card p-4 shadow-sm">
               <h4 class="card-title text-center">Introduction</h4>
               <p class="card-text">
@@ -127,7 +127,7 @@
           </div>
 
           <!-- Skills Section -->
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000">
             <div class="row">
               <!-- Website Development Skills -->
               <div class="col-md-6">
@@ -168,7 +168,7 @@
                 <span class="badge skills-badge"
                   >Indonesian (Native Proficiency)</span
                 >
-                <span class="badge skills-badge">Javanese</span>
+                <span class="badge skills-badge">Japanese</span>
               </div>
             </div>
           </div>
@@ -190,13 +190,17 @@
 
     <section id="projects">
       <div class="container mt-5">
-        <div class="col text-center">
+        <div
+          class="col text-center"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
           <h2><b>My Projects</b></h2>
           <div class="mb-4"></div>
         </div>
         <div class="row align-items-center project-card">
           <!-- Image section -->
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
             <img
               src="./Img/Aisyah_Bot_Discord_result.png"
               alt="Project Image"
@@ -205,7 +209,11 @@
           </div>
 
           <!-- Text section -->
-          <div class="col-md-6 project-content">
+          <div
+            class="col-md-6 project-content"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
             <h2>Aisyah Bot Discord - Music Player (2023-2024)</h2>
             <p>
               Aisyah bot is a Discord bot designed to play music automatically
@@ -240,7 +248,7 @@
     <!-- Contact -->
 
     <section id="contacs">
-      <div class="container">
+      <div class="container" data-aos="zoom-in">
         <div class="row justify-content-center">
           <div class="col-md-6">
             <div
@@ -312,11 +320,15 @@
 
     <footer style="background-color: #daf3ff">
       <div class="container text-center">
-        <a href="https://github.com/" target="_blank" class="social-icon">
+        <a
+          href="https://github.com/Fauzan-A25"
+          target="_blank"
+          class="social-icon"
+        >
           <i class="bi bi-github" style="font-size: 1.5rem"></i>
         </a>
         <a
-          href="https://www.linkedin.com/fauzan"
+          href="https://www.linkedin.com/fauzanahsanudin"
           target="_blank"
           class="social-icon"
         >
@@ -328,9 +340,6 @@
           class="social-icon"
         >
           <i class="bi bi-instagram" style="font-size: 1.5rem"></i>
-        </a>
-        <a href="https://x.com/" target="_blank" class="social-icon">
-          <i class="bi bi-twitter" style="font-size: 1.5rem"></i>
         </a>
       </div>
       <div class="container text-center mt-3">

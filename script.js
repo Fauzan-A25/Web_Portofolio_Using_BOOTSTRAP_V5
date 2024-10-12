@@ -9,3 +9,24 @@ document.addEventListener('contextmenu', event => event.preventDefault());
       e.preventDefault();
     }
   });
+
+  window.addEventListener('scroll', function() {
+    var sections = document.querySelectorAll('section');
+    var navLinks = document.querySelectorAll('.nav-link');
+
+    sections.forEach(function(section) {
+        var sectionTop = section.offsetTop;
+        var sectionHeight = section.offsetHeight;
+        var scrollPos = window.pageYOffset;
+
+        // Jika scroll melewati bagian ini
+        if (scrollPos >= sectionTop - sectionHeight / 3 && scrollPos < sectionTop + sectionHeight) {
+            navLinks.forEach(function(link) {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === section.getAttribute('id')) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+});
