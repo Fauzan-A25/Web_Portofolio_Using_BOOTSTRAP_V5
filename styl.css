@@ -2,7 +2,12 @@
 
 body {
     background-color: #daf3ff;
-}  
+    padding-top: 70px;
+} 
+
+.navbar-expand-lg{
+    width: auto;
+}
 
 h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
@@ -19,10 +24,10 @@ p, body {
     background-color: #fff;
 }
 
-.jumbotron {
-    padding-top: 7rem;
+/* .jumbotron {
+    padding-top: 5rem;
     background-color: #daf3ff;
-}
+} */
 
 #projects {
     background-color: #daf3ff;
@@ -147,14 +152,17 @@ footer .social-icon:hover {
 
 /* Breakpoint untuk ponsel kecil (≤ 480px) */
 @media (max-width: 480px) {
-    .jumbotron {
-        padding-top: 3rem;
-    }
     section {
         padding-top: 3rem;
     }
     .project-content h2 {
         font-size: 1.2rem;
+    }
+    .skills-section{
+        padding-bottom: 10px 
+    }
+    .introduction-section{
+        padding-bottom: 30px;
     }
     .skills-badge {
         margin: 2px;
@@ -193,14 +201,14 @@ footer .social-icon:hover {
         padding-top: 10rem;
     }
     section {
-        padding-top: 7rem;
+        padding-top: 5rem;
     }
     .project-content h2 {
         font-size: 2rem;
     }
     .skills-badge {
-        margin: 10px;
-        font-size: 1rem;
+        margin: 3px;
+        font-size: 0.83rem;
     }
     .download-btn {
         font-size: 1.1rem;
