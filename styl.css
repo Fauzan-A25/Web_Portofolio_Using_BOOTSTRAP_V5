@@ -1,3 +1,4 @@
+/* Base Styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
 
 body {
@@ -16,18 +17,9 @@ p, body {
     font-family: 'Open Sans', sans-serif;
 }
 
-#about {
+#about, #contacs {
     background-color: #fff;
 }
-
-#contacs {
-    background-color: #fff;
-}
-
-/* .jumbotron {
-    padding-top: 5rem;
-    background-color: #daf3ff;
-} */
 
 #projects {
     background-color: #daf3ff;
@@ -152,6 +144,13 @@ footer .social-icon:hover {
 
 /* Breakpoint untuk ponsel kecil (≤ 480px) */
 @media (max-width: 480px) {
+    .jumbotron{
+        height: auto;
+    }
+    .navbar-expand-lg{
+        height: auto;
+        width: auto;
+    }
     section {
         padding-top: 3rem;
     }
@@ -159,7 +158,7 @@ footer .social-icon:hover {
         font-size: 1.2rem;
     }
     .skills-section{
-        padding-bottom: 10px 
+        padding-bottom: 10px;
     }
     .introduction-section{
         padding-bottom: 30px;
@@ -174,16 +173,16 @@ footer .social-icon:hover {
     }
 }
 
-/* Breakpoint untuk tablet dan layar menengah (≤ 768px) */
-@media (max-width: 768px) {
+/* Breakpoint untuk ponsel lanskap (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
     .jumbotron {
-        padding-top: 5rem;
+        padding-top: 4rem;
     }
     section {
         padding-top: 4rem;
     }
     .project-content h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
     .skills-badge {
         margin: 3px;
@@ -195,8 +194,50 @@ footer .social-icon:hover {
     }
 }
 
-/* Breakpoint untuk layar besar (≥ 1200px) */
-@media (min-width: 1200px) {
+/* Breakpoint untuk tablet (769px – 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .jumbotron {
+        padding-top: 5rem;
+    }
+    section {
+        padding-top: 4rem;
+    }
+    .project-content h2 {
+        font-size: 1.5rem;
+    }
+    .skills-badge {
+        margin: 3px;
+        font-size: 0.95rem;
+    }
+    .download-btn {
+        font-size: 1rem;
+        padding: 12px 28px;
+    }
+}
+
+/* Breakpoint untuk laptop kecil (993px – 1200px) */
+@media (min-width: 993px) and (max-width: 1200px) {
+    .jumbotron {
+        padding-top: 6rem;
+    }
+    section {
+        padding-top: 4.5rem;
+    }
+    .project-content h2 {
+        font-size: 1.8rem;
+    }
+    .skills-badge {
+        margin: 4px;
+        font-size: 1rem;
+    }
+    .download-btn {
+        font-size: 1.05rem;
+        padding: 14px 28px;
+    }
+}
+
+/* Breakpoint untuk laptop besar/desktop (≥ 1201px) */
+@media (min-width: 1201px) {
     .jumbotron {
         padding-top: 10rem;
     }
@@ -224,7 +265,7 @@ footer .social-icon:hover {
 
 /* Warna saat elemen aktif */
 .nav-link.active {
-    color: #007bff; /* Warna biru saat aktif */
-    font-weight: bold; /* Bisa tambahkan efek lain seperti font tebal */
-    border-bottom: 2px solid #007bff; /* Garis bawah saat aktif */
+    color: #007bff;
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
 }
