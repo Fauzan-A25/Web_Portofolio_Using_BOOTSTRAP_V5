@@ -1,10 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
 
+body {
+    background-color: #daf3ff;
+  }  
+
 h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
 }
 p, body {
     font-family: 'Open Sans', sans-serif;
+}
+
+#about{
+    background-color: #ffff;
+}
+
+#contacs{
+    background-color: #fff;
 }
 
 .jumbotron {
@@ -37,3 +49,116 @@ section {
     opacity: 100; /* Mulai dengan opacity 0 */
     transition: all 0.5s ease;
 }
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px; /* Ukuran teks logo */
+    font-weight: 700; /* Ketebalan font */
+    color: #333; /* Warna teks logo, bisa diubah sesuai keinginan */
+    letter-spacing: 2px; /* Memberikan spasi antar huruf */
+    text-align: center; /* Menjadikan teks di tengah */
+}
+
+footer .social-icon {
+    margin: 0 15px; /* Jarak horizontal antar logo */
+    font-size: 1.5rem; /* Ukuran icon */
+    color: #333; /* Warna icon */
+    transition: color 0.3s ease;
+  }
+  
+footer .social-icon:hover {
+    color: #007bff; /* Warna ketika hover */
+  }
+
+
+.text-gradient {
+  background: linear-gradient(135deg, black, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  background-color: lightblue; /* Warna background biru */
+}
+
+/* Tambahkan gaya untuk gambar agar sudutnya melengkung */
+.project-image {
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+/* Gaya untuk Card dengan Hover Effect */
+.project-card {
+    background-color: #daf3ff;
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek Hover pada Card */
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    border: 2px solid #007bff; /* Border warna biru saat hover */
+}
+
+/* Tambahkan gaya padding untuk bagian teks */
+.project-content h2 {
+    font-weight: bold;
+    font-size: 24px;
+    color: #333;
+}
+
+.project-content p {
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+/* Gaya untuk Bagian Author */
+.project-content .author {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.project-content .author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.project-content .author span {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Efek hover animasi pada gambar proyek */
+.project-image {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-card {
+        flex-direction: column;
+    }
+
+    .project-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+.contaks:hover {
+    transform: scale(1.05);
+  }
+
+  /* Animasi Hover pada Tombol */
+  .btn:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
