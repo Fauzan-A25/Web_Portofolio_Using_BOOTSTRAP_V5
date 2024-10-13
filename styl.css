@@ -1,18 +1,31 @@
 /* Base Styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
 
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+}
+
 body {
     background-color: #daf3ff;
     padding-top: 70px;
-} 
+}
 
-.navbar-expand-lg{
-    width: auto;
+* {
+    box-sizing: inherit; /* Inherits box-sizing rule to all elements */
+}
+
+.navbar-expand-lg {
+    width: 100%; /* Make sure navbar takes full width */
 }
 
 h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
 }
+
 p, body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -29,10 +42,13 @@ section {
     padding-top: 5rem;
 }
 
+/* Ensure that all badges don't exceed their container */
 .skills-badge {
     background-color: #70d2ff;
     color: white;
     margin: 5px;
+    display: inline-block; /* Prevent badges from overflowing */
+    max-width: 100%; /* Ensure it doesn't overflow */
 }
 
 .download-btn {
@@ -41,12 +57,7 @@ section {
     border-radius: 50px;
 }
 
-.nav-about {
-    transition: background-color 0.3s ease;
-    opacity: 100;
-    transition: all 0.5s ease;
-}
-
+/* Ensure logo does not cause overflow */
 .logo {
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
@@ -54,6 +65,7 @@ section {
     color: #333;
     letter-spacing: 2px;
     text-align: center;
+    max-width: 100%; /* Ensure it doesn't overflow */
 }
 
 footer .social-icon {
@@ -78,7 +90,7 @@ footer .social-icon:hover {
 
 .project-image {
     border-radius: 10px;
-    max-width: 100%;
+    max-width: 100%; /* Prevent project images from overflowing */
 }
 
 .project-card {
@@ -86,6 +98,7 @@ footer .social-icon:hover {
     border-radius: 15px;
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%; /* Prevent cards from overflowing */
 }
 
 .project-card:hover {
@@ -94,6 +107,7 @@ footer .social-icon:hover {
     border: 2px solid #007bff;
 }
 
+/* Make sure project content doesn't overflow */
 .project-content h2 {
     font-weight: bold;
     font-size: 24px;
@@ -142,14 +156,14 @@ footer .social-icon:hover {
 
 /* Breakpoints */
 
-/* Breakpoint untuk ponsel kecil (≤ 480px) */
+/* Small mobile devices */
 @media (max-width: 480px) {
-    .jumbotron{
+    .jumbotron {
         height: auto;
     }
-    .navbar-expand-lg{
+    .navbar-expand-lg {
         height: auto;
-        width: auto;
+        width: 100%; /* Full width on mobile */
     }
     section {
         padding-top: 3rem;
@@ -157,10 +171,10 @@ footer .social-icon:hover {
     .project-content h2 {
         font-size: 1.2rem;
     }
-    .skills-section{
+    .skills-section {
         padding-bottom: 10px;
     }
-    .introduction-section{
+    .introduction-section {
         padding-bottom: 30px;
     }
     .skills-badge {
@@ -173,99 +187,9 @@ footer .social-icon:hover {
     }
 }
 
-/* Breakpoint untuk ponsel lanskap (481px – 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-    .jumbotron {
-        padding-top: 4rem;
+/* Ensure that larger media queries and components don't cause horizontal scroll */
+@media (min-width: 481px) and (max-width: 1200px) {
+    html, body {
+        overflow-x: hidden; /* Disable horizontal scrolling on these breakpoints */
     }
-    section {
-        padding-top: 4rem;
-    }
-    .project-content h2 {
-        font-size: 1.4rem;
-    }
-    .skills-badge {
-        margin: 3px;
-        font-size: 0.9rem;
-    }
-    .download-btn {
-        font-size: 0.9rem;
-        padding: 12px 25px;
-    }
-}
-
-/* Breakpoint untuk tablet (769px – 992px) */
-@media (min-width: 769px) and (max-width: 992px) {
-    .jumbotron {
-        padding-top: 5rem;
-    }
-    section {
-        padding-top: 4rem;
-    }
-    .project-content h2 {
-        font-size: 1.5rem;
-    }
-    .skills-badge {
-        margin: 3px;
-        font-size: 0.95rem;
-    }
-    .download-btn {
-        font-size: 1rem;
-        padding: 12px 28px;
-    }
-}
-
-/* Breakpoint untuk laptop kecil (993px – 1200px) */
-@media (min-width: 993px) and (max-width: 1200px) {
-    .jumbotron {
-        padding-top: 6rem;
-    }
-    section {
-        padding-top: 4.5rem;
-    }
-    .project-content h2 {
-        font-size: 1.8rem;
-    }
-    .skills-badge {
-        margin: 4px;
-        font-size: 1rem;
-    }
-    .download-btn {
-        font-size: 1.05rem;
-        padding: 14px 28px;
-    }
-}
-
-/* Breakpoint untuk laptop besar/desktop (≥ 1201px) */
-@media (min-width: 1201px) {
-    .jumbotron {
-        padding-top: 10rem;
-    }
-    section {
-        padding-top: 5rem;
-    }
-    .project-content h2 {
-        font-size: 2rem;
-    }
-    .skills-badge {
-        margin: 3px;
-        font-size: 0.83rem;
-    }
-    .download-btn {
-        font-size: 1.1rem;
-        padding: 15px 30px;
-    }
-}
-
-/* Warna default */
-.nav-link {
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-/* Warna saat elemen aktif */
-.nav-link.active {
-    color: #007bff;
-    font-weight: bold;
-    border-bottom: 2px solid #007bff;
 }
