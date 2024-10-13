@@ -3,10 +3,10 @@
 
 html, body {
     width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+    box-sizing: border-box;
 }
 
 body {
@@ -15,11 +15,11 @@ body {
 }
 
 * {
-    box-sizing: inherit; /* Inherits box-sizing rule to all elements */
+    box-sizing: inherit; 
 }
 
 .navbar-expand-lg {
-    width: 100%; /* Make sure navbar takes full width */
+    width: 100%; 
 }
 
 h1, h2, h3 {
@@ -42,13 +42,12 @@ section {
     padding-top: 5rem;
 }
 
-/* Ensure that all badges don't exceed their container */
 .skills-badge {
     background-color: #70d2ff;
     color: white;
     margin: 5px;
-    display: inline-block; /* Prevent badges from overflowing */
-    max-width: 100%; /* Ensure it doesn't overflow */
+    display: inline-block; 
+    max-width: 100%; 
 }
 
 .download-btn {
@@ -57,7 +56,6 @@ section {
     border-radius: 50px;
 }
 
-/* Ensure logo does not cause overflow */
 .logo {
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
@@ -65,7 +63,7 @@ section {
     color: #333;
     letter-spacing: 2px;
     text-align: center;
-    max-width: 100%; /* Ensure it doesn't overflow */
+    max-width: 100%; 
 }
 
 footer .social-icon {
@@ -90,7 +88,7 @@ footer .social-icon:hover {
 
 .project-image {
     border-radius: 10px;
-    max-width: 100%; /* Prevent project images from overflowing */
+    max-width: 100%; 
 }
 
 .project-card {
@@ -98,7 +96,7 @@ footer .social-icon:hover {
     border-radius: 15px;
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 100%; /* Prevent cards from overflowing */
+    max-width: 100%; 
 }
 
 .project-card:hover {
@@ -107,7 +105,6 @@ footer .social-icon:hover {
     border: 2px solid #007bff;
 }
 
-/* Make sure project content doesn't overflow */
 .project-content h2 {
     font-weight: bold;
     font-size: 24px;
@@ -158,38 +155,44 @@ footer .social-icon:hover {
 
 /* Small mobile devices */
 @media (max-width: 480px) {
-    .jumbotron {
-        height: auto;
+    .introduction-section{
+        margin-bottom: 20px;
     }
-    .navbar-expand-lg {
-        height: auto;
-        width: 100%; /* Full width on mobile */
+    .skills-section{
+        margin-bottom: 2px;
+        margin-left: 9px;
     }
-    section {
-        padding-top: 3rem;
+    .skills-badge{
+        font-size: 16px;
     }
+    .project-card {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center;     
+        text-align: center;      
+        margin: 20px auto;       
+        width: 90%;              
+    }
+
+    .project-content {
+        margin-top: 20px; 
+        padding: 10px; 
+    }
+
     .project-content h2 {
         font-size: 1.2rem;
+        margin-bottom: 10px;
     }
-    .skills-section {
-        padding-bottom: 10px;
-    }
-    .introduction-section {
-        padding-bottom: 30px;
-    }
-    .skills-badge {
-        margin: 2px;
-        font-size: 0.8rem;
-    }
-    .download-btn {
-        font-size: 0.8rem;
-        padding: 10px 20px;
+
+    .project-content p {
+        font-size: 0.9rem; 
     }
 }
 
-/* Ensure that larger media queries and components don't cause horizontal scroll */
+
 @media (min-width: 481px) and (max-width: 1200px) {
     html, body {
-        overflow-x: hidden; /* Disable horizontal scrolling on these breakpoints */
+        overflow-x: hidden; 
     }
 }
