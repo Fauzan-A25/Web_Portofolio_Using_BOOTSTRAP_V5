@@ -196,3 +196,32 @@ footer .social-icon:hover {
         overflow-x: hidden; 
     }
 }
+
+/* === Custom Scrollbar - Webkit Browsers (Chrome, Edge, Safari) === */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* Mengubah latar belakang track scrollbar menjadi transparan */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4ED7F1;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); /* Memberi kesan kedalaman */
+  }
+  
+  
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #31c7e8, #4ed7f1); /* Gradasi lebih gelap saat hover */
+}
+
+/* === Custom Scrollbar - Firefox === */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #4ED7F1 transparent; /* Mengubah latar belakang scrollbar di Firefox menjadi transparan */
+}
