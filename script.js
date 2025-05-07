@@ -1,5 +1,5 @@
 document.getElementById("CV").addEventListener("click", function() {
-  window.location.href = "https://drive.google.com/file/d/19f3bSYFbZTvG3eKWngkDdv9s8fWTQdK5/view?usp=sharing"; 
+  window.location.href = "https://docs.google.com/document/d/1zm9N7lCHsZPCChdz5zjfQK4wogPMqb5g/edit?usp=sharing&ouid=108411748673413313360&rtpof=true&sd=true"; 
 });
 
 // document.addEventListener('contextmenu', event => event.preventDefault());
