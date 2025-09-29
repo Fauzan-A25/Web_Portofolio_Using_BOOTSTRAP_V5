@@ -1,9 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofolio || Fauzan Ahsanudin Alfikri</title>
+    <title>Fauzan Ahsanudin Alfikri | Data Science Portfolio</title>
+    <meta
+      name="description"
+      content="Data Science student passionate about machine learning, analytics, and innovative solutions. Explore my projects and skills in Python, data analysis, and web development."
+    />
+    <meta
+      name="keywords"
+      content="Data Science, Machine Learning, Python, Portfolio, Telkom University, Analytics, Web Development"
+    />
+    <meta name="author" content="Fauzan Ahsanudin Alfikri" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="Fauzan Ahsanudin Alfikri | Data Science Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Data Science student passionate about machine learning and analytics"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+
+    <!-- Bootstrap 5 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -11,31 +34,51 @@
       crossorigin="anonymous"
     />
 
-    <!-- Boostrap Icons -->
+    <!-- Bootstrap Icons -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
 
-    <!-- AOV -->
-
+    <!-- AOS Animation Library -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <!-- My CSS -->
+    <!-- Swiper Slider CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
-    <link rel="stylesheet" href="styl.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="modern_styl.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>"
+    />
+
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
 
   <body>
-    <!-- NavBar -->
-    <nav
-      class="navbar navbar-expand-lg shadow-sm fixed-top"
-      style="background-color: #daf3ff"
-    >
-      <div class="container-fluid">
-        <div class="logo text-gradient">FZN</div>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading">
+      <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Modern Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+      <div class="container">
+        <a class="navbar-brand" href="#home" aria-label="FZN Portfolio Home">
+          <div class="logo">FZN</div>
+        </a>
+
         <button
-          class="navbar-toggler"
+          class="navbar-toggler border-0"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -45,342 +88,598 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link nav-home" href="#home"
-                ><i class="bi bi-house-fill"></i> Home</a
+              <a
+                class="nav-link active"
+                href="#home"
+                aria-label="Navigate to Home section"
               >
+                <i class="bi bi-house-door"></i> Home
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-about" href="#about"
-                ><i class="bi bi-file-person-fill"></i> About</a
+              <a
+                class="nav-link"
+                href="#about"
+                aria-label="Navigate to About section"
               >
+                <i class="bi bi-person"></i> About
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-projects" href="#projects"
-                ><i class="bi bi-clipboard-data"></i> Projects</a
+              <a
+                class="nav-link"
+                href="#projects"
+                aria-label="Navigate to Projects section"
               >
+                <i class="bi bi-code-slash"></i> Projects
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-contacs" href="#contacs"
-                ><i class="bi bi-person-lines-fill"></i> Contacs</a
+              <a
+                class="nav-link"
+                href="#contact"
+                aria-label="Navigate to Contact section"
               >
+                <i class="bi bi-envelope"></i> Contact
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- End Navbar -->
+    <!-- Hero Section -->
+    <section id="home" class="jumbotron">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-image" data-aos="zoom-in" data-aos-duration="1000">
+            <img
+              src="./Img/Fauzan.png"
+              alt="Fauzan Ahsanudin Alfikri - Data Science Student"
+              loading="lazy"
+            />
+          </div>
 
-    <!-- Jumboron -->
+          <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+            Fauzan Ahsanudin Alfikri
+          </h1>
 
-    <section
-      class="jumbotron text-center"
-      style="background-color: #daf3ff; padding-top: 5rem"
-      id="home"
-    >
-      <img
-        src="./Img/Fauzan.png"
-        alt="Fauzan Ahsanudin Alfikri"
-        width="200"
-        class="rounded-circle img-thumbnail"
-      />
-      <h1 class="display-4">Fauzan Ahsanudin Alfikri</h1>
-      <p class="lead">Programming || Videografer || Data Analyst</p>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#fff"
-          fill-opacity="1"
-          d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,101.3C672,75,768,53,864,48C960,43,1056,53,1152,53.3C1248,53,1344,43,1392,37.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
+          <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">
+            Data Science Student | Machine Learning Enthusiast | Python
+            Developer
+          </p>
 
-    <!-- End Jumbotron -->
-
-    <!-- About -->
-
-    <section id="about">
-      <div class="container mt-5">
-        <div class="row text-center mb-3">
-          <div class="col" data-aos="fade-down" data-aos-duration="1000">
-            <h2>About me</h2>
+          <div class="hero-actions" data-aos="fade-up" data-aos-delay="600">
+            <a
+              href="#projects"
+              class="modern-btn"
+              aria-label="View my projects"
+            >
+              <i class="bi bi-rocket-takeoff"></i>
+              View Projects
+            </a>
+            <a
+              href="#"
+              class="modern-btn"
+              id="downloadCV"
+              aria-label="Download my CV"
+            >
+              <i class="bi bi-download"></i>
+              Download CV
+            </a>
           </div>
         </div>
-        <div class="row">
-          <!-- Introduction Section -->
-          <div
-            class="col-md-6 introduction-section"
-            data-aos="fade-right"
-            data-aos-duration="1000"
-          >
-            <div class="card p-4 shadow-sm">
-              <h4 class="card-title text-center">Introduction</h4>
-              <p class="card-text">
-                Second-year undergraduate student of Data Science at Telkom University with strong skills in data analysis, statistical evaluation, and problem-solving. Actively involved in academic activities with a strong attention to detail and excellent observation skills. Proficient in programming with Python for data processing and analysis. Experienced in participating in various Data Science competitions, demonstrating strong analytical and critical thinking skills. A collaborative and independent team player with good time management skills, dedicated to delivering accurate and reliable data insights.
+      </div>
+
+      <!-- Wave Divider -->
+      <div class="wave-divider">
+        <svg
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+            opacity=".25"
+            class="shape-fill"
+          ></path>
+          <path
+            d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+            opacity=".5"
+            class="shape-fill"
+          ></path>
+          <path
+            d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center" data-aos="fade-down">
+            <h2 class="section-title mb-3">About Me</h2>
+            <p class="lead text-secondary">
+              Passionate about turning data into insights and solving real-world
+              problems through technology
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Introduction Card -->
+          <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+            <div class="modern-card">
+              <h4 class="mb-4">
+                <i
+                  class="bi bi-person-circle me-2"
+                  style="color: var(--accent-color)"
+                ></i>
+                Introduction
+              </h4>
+              <p class="mb-4">
+                Second-year undergraduate student of Data Science at Telkom
+                University with strong skills in data analysis, statistical
+                evaluation, and problem-solving. Actively involved in academic
+                activities with excellent attention to detail and observation
+                skills.
+              </p>
+              <p class="mb-4">
+                Proficient in programming with Python for data processing and
+                analysis. Experienced in participating in various Data Science
+                competitions, demonstrating strong analytical and critical
+                thinking skills. A collaborative team player dedicated to
+                delivering accurate and reliable data insights.
               </p>
               <div class="text-center">
-                <button id="CV" class="btn download-btn">
-                  Download CV <i class="bi bi-download"></i>
+                <button class="modern-btn" id="CV" aria-label="Download resume">
+                  <i class="bi bi-download"></i>
+                  Download Resume
                 </button>
               </div>
             </div>
           </div>
 
           <!-- Skills Section -->
-          <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000">
-            <div class="row">
-              <!-- Website Development Skills -->
-              <div class="col-md-6 skills-section">
-                <h5 class="mb-3">Website Development</h5>
-                <span class="badge skills-badge">HTML</span>
-                <span class="badge skills-badge">CSS</span>
-                <span class="badge skills-badge">JavaScript</span>
-                <span class="badge skills-badge">Bootstrap 5</span>
-                <span class="badge skills-badge">Node.js</span>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+            <div class="skills-grid">
+              <!-- Web Development Skills -->
+              <div class="skill-category">
+                <h5><i class="bi bi-code-square me-2"></i>Web Development</h5>
+                <div class="skills-container">
+                  <span class="skills-badge">HTML5</span>
+                  <span class="skills-badge">CSS3</span>
+                  <span class="skills-badge">JavaScript</span>
+                  <span class="skills-badge">Bootstrap 5</span>
+                  <span class="skills-badge">Node.js</span>
+                </div>
               </div>
+
               <!-- Data Science Skills -->
-              <div class="col-md-6 skills-section">
-                <h5 class="mb-3">Data Science</h5>
-                <span class="badge skills-badge">Python</span>
-                <span class="badge skills-badge">Pandas</span>
-                <span class="badge skills-badge">Numpy</span>
-                <span class="badge skills-badge">Matplotlib</span>
-                <span class="badge skills-badge">Seaborn</span>
-                <span class="badge skills-badge">Random Forest</span>
+              <div class="skill-category">
+                <h5><i class="bi bi-graph-up me-2"></i>Data Science</h5>
+                <div class="skills-container">
+                  <span class="skills-badge">Python</span>
+                  <span class="skills-badge">Pandas</span>
+                  <span class="skills-badge">NumPy</span>
+                  <span class="skills-badge">Matplotlib</span>
+                  <span class="skills-badge">Seaborn</span>
+                  <span class="skills-badge">Scikit-learn</span>
+                  <span class="skills-badge">XGBoost</span>
+                </div>
               </div>
-            </div>
-            <div class="row mt-3">
-              <!-- Languange Programing Skills -->
-              <div class="col-md-6 skills-section">
-                <h5 class="mb-3">Languange Programing Skills</h5>
-                <span class="badge skills-badge">Python</span>
-                <span class="badge skills-badge">GO Languange</span>
-                <span class="badge skills-badge">Python</span>
-                <span class="badge skills-badge">JavaScript</span>
-                <span class="badge skills-badge">C++</span>
+
+              <!-- Programming Languages -->
+              <div class="skill-category">
+                <h5><i class="bi bi-terminal me-2"></i>Programming</h5>
+                <div class="skills-container">
+                  <span class="skills-badge">Python</span>
+                  <span class="skills-badge">JavaScript</span>
+                  <span class="skills-badge">Go</span>
+                  <span class="skills-badge">C++</span>
+                  <span class="skills-badge">SQL</span>
+                </div>
               </div>
-              <!-- Languange Skills -->
-              <div class="col-md-6 skills-section">
-                <h5 class="mb-3">Languange Skills</h5>
-                <span class="badge skills-badge"
-                  >English (Professional Proficiency)</span
-                >
-                <span class="badge skills-badge"
-                  >Indonesian (Native Proficiency)</span
-                >
-                <span class="badge skills-badge">Japanese</span>
+
+              <!-- Language Skills -->
+              <div class="skill-category">
+                <h5><i class="bi bi-translate me-2"></i>Languages</h5>
+                <div class="skills-container">
+                  <span class="skills-badge">Indonesian (Native)</span>
+                  <span class="skills-badge">English (Professional)</span>
+                  <span class="skills-badge">Japanese (Basic)</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#daf3ff"
-          fill-opacity="1"
-          d="M0,96L48,112C96,128,192,160,288,192C384,224,480,256,576,240C672,224,768,160,864,144C960,128,1056,160,1152,176C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
     </section>
 
-    <!-- End About -->
-
-    <!-- Project -->
-    <section id="projects">
-      <div class="container mt-5">
-        <div class="col text-center" data-aos="fade-down" data-aos-duration="1000">
-          <h2><b>My Projects</b></h2>
-          <div class="mb-4"></div>
+    <!-- Projects Section dengan Slider -->
+    <section id="projects" class="py-5">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center" data-aos="fade-down">
+            <h2 class="section-title mb-3">Featured Projects</h2>
+            <p class="lead text-secondary">
+              Showcasing my latest work in data science and machine learning
+            </p>
+          </div>
         </div>
 
-        <!-- Project 1 -->
-        <a href="https://github.com/Fauzan-A25/FOSSIL_GDGoC-TUBES" target="_blank" class="project-link text-decoration-none text-dark">
-          <div class="row align-items-center project-card mb-5">
-            <!-- Image section (reversed with text for variation) -->
-            <div class="col-md-6 order-md-2" data-aos="fade-left" data-aos-duration="1000">
-              <img src="./Img/Fossil_App_Screenshot.png" alt="Fossil App" class="img-fluid project-image border rounded shadow-sm" />
-            </div>
-            
-
-            <!-- Text section -->
-            <div class="col-md-6 order-md-1 project-content" data-aos="fade-right" data-aos-duration="1000">
-              <h2>Fossil - Water Potability Prediction App (2024)</h2>
-              <p>
-                Fossil is a Streamlit-based Machine Learning application designed to predict the potability of water 
-                using various chemical and physical parameters such as pH, sulfate concentration, and organic carbon. 
-                Built with an MLPClassifier model, this tool helps users assess whether water is safe to drink. 
-                Developed as part of the final project for the Google Developer Student Clubs Open Class (GDGoC) at Telkom University.
-              </p>
-              <div class="author d-flex align-items-center">
-                <img src="./Img/Fauzan.png" alt="Fauzan" class="author-image" />
-                <span class="ms-2">By Fauzan Ahsanudin Alfikri - April 2025</span>
-              </div>
-            </div>
-          </div>
-        </a>
-
-        <!-- Project 2 -->
-        <a href="https://github.com/Fauzan-A25/coppa-risk-prediction-findit2025-fauzan" target="_blank" class="project-link text-decoration-none text-dark">
-          <div class="row align-items-center project-card mb-5">
-            <!-- Image section -->
-            <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
-              <img src="./Img/COPPA_Model.png" alt="COPPA Risk Prediction" class="img-fluid project-image border rounded shadow-sm" />
-            </div>
-
-            <!-- Text section -->
-            <div class="col-md-6 project-content" data-aos="fade-left" data-aos-duration="1000">
-              <h2>COPPA Risk Prediction - FIND IT UGM 2025</h2>
-              <p>
-                A machine learning model built with XGBoost to predict whether a mobile application is at risk of violating the Children's Online Privacy Protection Act (COPPA). 
-                This project was developed for the Data Analytics Competition FIND IT 2025, hosted by Universitas Gadjah Mada. 
-                It includes preprocessing, feature engineering, class balancing, and model evaluation using AUC metrics.
-              </p>
-              <div class="author d-flex align-items-center">
-                <img src="./Img/Fauzan.png" alt="Fauzan" class="author-image" />
-                <span class="ms-2">By Fauzan Ahsanudin Alfikri - April 2025</span>
-              </div>
-            </div>
-          </div>
-        </a>
-    </section>
-    <!-- End Project -->
-
-    <!-- SVG Wave -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="display: block; width: 100vw; height: auto; margin: 0; padding: 0;">
-      <path
-        fill="#fff"
-        fill-opacity="1"
-        d="M0,128L48,138.7C96,149,192,171,288,197.3C384,224,480,256,576,272C672,288,768,288,864,250.7C960,213,1056,139,1152,122.7C1248,107,1344,149,1392,170.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-      ></path>
-    </svg>
-
-
-    <!-- Contact -->
-
-    <section id="contacs">
-      <div class="container" data-aos="zoom-in">
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <div
-              class="card contaks p-4"
-              style="
-                border-radius: 20px;
-                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-                transition: transform 0.3s ease;
-              "
+        <!-- Projects Slider Container -->
+        <div
+          class="projects-slider-container"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <!-- Slider Navigation Buttons -->
+          <div class="slider-navigation">
+            <button
+              class="slider-btn slider-prev"
+              aria-label="Previous project"
             >
-              <div class="card-body text-center">
-                <h3
-                  class="card-title mb-4"
-                  style="font-weight: 600; font-size: 1.8rem"
-                >
-                  Contact me?
-                </h3>
-                <p class="card-text" style="font-size: 1rem; color: #6c757d">
-                  I'd love to connect with you! Feel free to reach out through
-                  LinkedIn or Gmail for any inquiries or collaborations.
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="slider-btn slider-next" aria-label="Next project">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
+
+          <!-- Swiper Container -->
+          <div class="swiper projects-swiper">
+            <div class="swiper-wrapper">
+              <!-- Project 1: Fossil Water Potability -->
+              <div class="swiper-slide">
+                <div class="project-card">
+                  <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                      <div class="project-image-container">
+                        <img
+                          src="./Img/Fossil_App_Screenshot.png"
+                          alt="Fossil Water Potability Prediction Application Screenshot"
+                          class="project-image"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1 project-content">
+                      <div class="project-badge mb-3">
+                        <span class="badge bg-primary me-2"
+                          >Machine Learning</span
+                        >
+                        <span class="badge bg-success me-2">Streamlit</span>
+                        <span class="badge bg-info">Python</span>
+                      </div>
+                      <h3>Fossil - Water Potability Prediction</h3>
+                      <p>
+                        An intelligent Streamlit-based Machine Learning
+                        application that predicts water potability using various
+                        chemical and physical parameters such as pH, sulfate
+                        concentration, and organic carbon. Built with
+                        MLPClassifier model to assess water safety for drinking
+                        purposes.
+                      </p>
+                      <div class="project-links mb-3">
+                        <a
+                          href="https://github.com/Fauzan-A25/FOSSIL_GDGoC-TUBES"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="modern-btn me-2"
+                          aria-label="View Fossil project source code on GitHub"
+                        >
+                          <i class="bi bi-github"></i>
+                          View Code
+                        </a>
+                        <a
+                          href="#"
+                          class="modern-btn"
+                          aria-label="View live demo of Fossil application"
+                        >
+                          <i class="bi bi-eye"></i>
+                          Live Demo
+                        </a>
+                      </div>
+                      <div class="author-info">
+                        <img
+                          src="./Img/Fauzan.png"
+                          alt="Fauzan Ahsanudin Alfikri"
+                          class="author-image"
+                          loading="lazy"
+                        />
+                        <div class="author-text">
+                          <div class="fw-semibold">
+                            Fauzan Ahsanudin Alfikri
+                          </div>
+                          <div class="small text-secondary">April 2024</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 2: COPPA Risk Prediction -->
+              <div class="swiper-slide">
+                <div class="project-card">
+                  <div class="row align-items-center">
+                    <div class="col-lg-6">
+                      <div class="project-image-container">
+                        <img
+                          src="./Img/COPPA_Model.png"
+                          alt="COPPA Risk Prediction Model Visualization"
+                          class="project-image"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-6 project-content">
+                      <div class="project-badge mb-3">
+                        <span class="badge bg-warning me-2">XGBoost</span>
+                        <span class="badge bg-danger me-2">Classification</span>
+                        <span class="badge bg-secondary">Data Science</span>
+                      </div>
+                      <h3>COPPA Risk Prediction Model</h3>
+                      <p>
+                        Advanced machine learning model using XGBoost to predict
+                        COPPA (Children's Online Privacy Protection Act)
+                        violation risks in mobile applications. Features
+                        comprehensive data preprocessing, feature engineering,
+                        and class balancing techniques with AUC-based evaluation
+                        metrics.
+                      </p>
+                      <div class="project-links mb-3">
+                        <a
+                          href="https://github.com/Fauzan-A25/coppa-risk-prediction-findit2025-fauzan"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="modern-btn me-2"
+                          aria-label="View COPPA project source code on GitHub"
+                        >
+                          <i class="bi bi-github"></i>
+                          View Code
+                        </a>
+                        <a
+                          href="#"
+                          class="modern-btn"
+                          aria-label="View COPPA project results and analysis"
+                        >
+                          <i class="bi bi-bar-chart"></i>
+                          View Results
+                        </a>
+                      </div>
+                      <div class="author-info">
+                        <img
+                          src="./Img/Fauzan.png"
+                          alt="Fauzan Ahsanudin Alfikri"
+                          class="author-image"
+                          loading="lazy"
+                        />
+                        <div class="author-text">
+                          <div class="fw-semibold">
+                            Fauzan Ahsanudin Alfikri
+                          </div>
+                          <div class="small text-secondary">April 2025</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Template untuk project baru (hidden, bisa di-uncomment saat menambah project) -->
+              <!-- 
+                        <div class="swiper-slide">
+                            <div class="project-card">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-6 order-lg-2">
+                                        <div class="project-image-container">
+                                            <img src="./Img/your-project-image.png" alt="Your Project Description" class="project-image" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 order-lg-1 project-content">
+                                        <div class="project-badge mb-3">
+                                            <span class="badge bg-primary me-2">Technology 1</span>
+                                            <span class="badge bg-success me-2">Technology 2</span>
+                                            <span class="badge bg-info">Technology 3</span>
+                                        </div>
+                                        <h3>Your Project Title</h3>
+                                        <p>
+                                            Your project description goes here...
+                                        </p>
+                                        <div class="project-links mb-3">
+                                            <a href="#" target="_blank" rel="noopener noreferrer" class="modern-btn me-2">
+                                                <i class="bi bi-github"></i>
+                                                View Code
+                                            </a>
+                                            <a href="#" class="modern-btn">
+                                                <i class="bi bi-eye"></i>
+                                                Live Demo
+                                            </a>
+                                        </div>
+                                        <div class="author-info">
+                                            <img src="./Img/Fauzan.png" alt="Fauzan Ahsanudin Alfikri" class="author-image" loading="lazy" />
+                                            <div class="author-text">
+                                                <div class="fw-semibold">Fauzan Ahsanudin Alfikri</div>
+                                                <div class="small text-secondary">Date</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+            </div>
+
+            <!-- Pagination Dots -->
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <!-- Project Counter -->
+          <div class="project-counter">
+            <span class="current-project">01</span>
+            <span class="separator">/</span>
+            <span class="total-projects">02</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div
+              class="contact-card"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            >
+              <div
+                class="contact-content"
+                style="position: relative; z-index: 2"
+              >
+                <h2 class="mb-4">Let's Work Together</h2>
+                <p class="lead mb-4">
+                  I'm always excited to collaborate on innovative data science
+                  projects and explore new opportunities. Let's connect and
+                  create something amazing together!
                 </p>
-                <a
-                  href="mailto:fauzanahsanudin@gmail.com"
-                  class="btn btn-danger mb-3"
-                  style="
-                    padding: 10px 20px;
-                    font-size: 1rem;
-                    border-radius: 30px;
-                    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
-                    transition: all 0.3s ease;
-                  "
-                >
-                  <i class="bi bi-envelope me-2" style="font-size: 1.5rem"></i>
-                  Gmail
-                </a>
-                <br />
-                <a
-                  href="https://www.linkedin.com/in/fauzanahsanudin/"
-                  target="_blank"
-                  class="btn btn-primary"
-                  style="
-                    padding: 10px 20px;
-                    font-size: 1rem;
-                    border-radius: 30px;
-                    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
-                    transition: all 0.3s ease;
-                  "
-                >
-                  <i class="bi bi-linkedin me-2" style="font-size: 1.5rem"></i>
-                  LinkedIn
-                </a>
+
+                <div class="contact-actions mb-4">
+                  <a
+                    href="mailto:fauzanahsanudin@gmail.com"
+                    class="modern-btn me-2"
+                    aria-label="Send email to Fauzan"
+                  >
+                    <i class="bi bi-envelope-fill"></i>
+                    Send Email
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/fauzanahsanudin/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="modern-btn"
+                    aria-label="Connect on LinkedIn"
+                  >
+                    <i class="bi bi-linkedin"></i>
+                    LinkedIn
+                  </a>
+                </div>
+
+                <div class="contact-info">
+                  <p class="mb-2">
+                    <i
+                      class="bi bi-geo-alt-fill me-2"
+                      style="color: var(--accent-color)"
+                    ></i>
+                    Bandung, Indonesia
+                  </p>
+                  <p class="mb-2">
+                    <i
+                      class="bi bi-envelope-fill me-2"
+                      style="color: var(--accent-color)"
+                    ></i>
+                    fauzanahsanudin@gmail.com
+                  </p>
+                  <p class="mb-0">
+                    <i
+                      class="bi bi-mortarboard-fill me-2"
+                      style="color: var(--accent-color)"
+                    ></i>
+                    Telkom University - Data Science Student
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#daf3ff"
-          fill-opacity="1"
-          d="M0,96L48,122.7C96,149,192,203,288,229.3C384,256,480,256,576,218.7C672,181,768,107,864,112C960,117,1056,203,1152,229.3C1248,256,1344,224,1392,208L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
     </section>
 
-    <!-- End Contact -->
-
-    <!-- Footer -->
-
-    <footer style="background-color: #daf3ff">
-      <div class="container text-center">
-        <a
-          href="https://github.com/Fauzan-A25"
-          target="_blank"
-          class="social-icon"
-        >
-          <i class="bi bi-github" style="font-size: 1.5rem"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/fauzanahsanudin/"
-          target="_blank"
-          class="social-icon"
-        >
-          <i class="bi bi-linkedin" style="font-size: 1.5rem"></i>
-        </a>
-        <a
-          href="https://www.instagram.com/fauzan_1718"
-          target="_blank"
-          class="social-icon"
-        >
-          <i class="bi bi-instagram" style="font-size: 1.5rem"></i>
-        </a>
-      </div>
-      <div class="container text-center mt-3">
-        <p>&copy; 2024 FZN. All rights reserved.</p>
+    <!-- Modern Footer -->
+    <footer class="modern-footer">
+      <div class="container">
+        <div class="social-links">
+          <a
+            href="https://github.com/Fauzan-A25"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="Follow on GitHub"
+          >
+            <i class="bi bi-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/fauzanahsanudin/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="Connect on LinkedIn"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/fauzan_1718"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="Follow on Instagram"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+        <p class="mb-0 text-secondary">
+          &copy; 2024 Fauzan Ahsanudin Alfikri. Crafted with passion and modern
+          web technologies.
+        </p>
       </div>
     </footer>
 
-    <!-- End Footer -->
+    <!-- Theme Toggle Button -->
+    <button
+      class="theme-toggle"
+      id="themeToggle"
+      title="Toggle Dark/Light Mode"
+      aria-label="Toggle dark and light mode"
+    >
+      <i class="bi bi-moon-stars-fill"></i>
+    </button>
 
-    <!-- My JS -->
-
-    <script src="script.js"></script>
-
+    <!-- Scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+    <!-- Swiper Slider JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="modern_script.js"></script>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-      crossorigin="anonymous"
-    ></script>
+    <script>
+      // Initialize AOS Animation Library
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+        easing: "ease-out-cubic",
+      });
+
+      // Performance optimization: Disable AOS on mobile for better performance
+      if (window.innerWidth < 768) {
+        AOS.init({
+          disable: true,
+        });
+      }
+    </script>
   </body>
 </html>
